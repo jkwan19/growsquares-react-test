@@ -2,6 +2,10 @@
 
 React project test for prospective web developers wanting to come work at GrowSquares.
 
+![GrowTech Layout Styles](https://user-images.githubusercontent.com/20383602/121602539-6f939900-ca15-11eb-9bb6-030538037739.png)
+
+![Screen Shot 2021-06-10 at 5 59 17 PM](https://user-images.githubusercontent.com/20383602/121602641-9ce04700-ca15-11eb-84b8-e7509536dec4.jpg)
+
 ## Overview
 
 We want to test you in how you would perform in creating a component for our design team and will give us a feel as to how you perform on a task that closely resembles what you would be working on at GrowSquares!
@@ -46,3 +50,7 @@ What you read above was an overview. We get into the nitty-gritty details below:
 - This is just a template repository so it is up to you how you would like to structure your solution. Part of this assessment is to judge how well you structure and componentize your code!
 - If possible, deploy your web app to Heroku as a web app and email us the Heroku web app link. We do keep in mind that if you do so, it takes a couple of minutes for the Heroku cluster to spin up (if you're on a free version), so don't be worried on that end!
 - If you cannot deploy to a free hosting platform, push your code to a public git repository so that we can see your commit history and judge you based on how far you got based on a specific time frame. Keep that in mind when developing your project. Once you have done so, send us a link to your public git repo, and please make sure not to commit the `node_modules` folder.
+
+## Notes
+
+- If you are still confused, we have provided a demo video as to how we want this project to function: [Demo Video](https://user-images.githubusercontent.com/20383602/121602963-12e4ae00-ca16-11eb-840f-2614972f075f.mov). Note that the layout would be different than the layout you are expected to create.
