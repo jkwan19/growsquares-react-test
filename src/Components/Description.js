@@ -3,12 +3,14 @@ import './Description.css'
 
 const Description = () => {
   return (
-    <div>
-      <h2 className="header">consequat mauris nunc</h2>
-      <h4 className="subheader">netus et malesuada fames ac</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue mauris augue neque gravida in fermentum et sollicitudin ac. Vitae purus faucibus ornare suspendisse sed nisi lacus.
-      </p>
+    <div className="description">
+      <div className="text-box">
+        <h2 className="header">consequat mauris nunc</h2>
+        <h4 className="subheader">netus et malesuada fames ac</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Augue mauris augue neque gravida in fermentum et sollicitudin ac. Vitae purus faucibus ornare suspendisse sed nisi lacus.
+        </p>
+      </div>
     </div>
   )
 };
