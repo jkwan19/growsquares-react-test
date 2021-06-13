@@ -3,6 +3,7 @@ import './App.css';
 
 import Description from './Components/Description';
 import Video from './Components/Video';
+import HouseBar from './Components/HouseBar';
 
 const App = () => {
   return (
