@@ -5,9 +5,11 @@ import HouseButton from './HouseButton';
 const HouseBar = () => {
   return (
     <div className="btn-bar">
-      <HouseButton type="House"/>
-      <HouseButton type="Apartment"/>
-      <HouseButton type="Town House"/>
+      <div className="btn-container">
+        <HouseButton type="House"/>
+        <HouseButton type="Apartment"/>
+        <HouseButton type="Town House"/>
+      </div>
     </div>
   )
 }
