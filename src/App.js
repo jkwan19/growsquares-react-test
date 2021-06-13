@@ -1,9 +1,12 @@
 import React from 'react';
+import './App.css';
+
+import Description from './Components/Description';
 
 const App = () => {
   return (
-    <div>
-      App
+    <div id='app'>
+      <Description />
     </div>
   )
 }
