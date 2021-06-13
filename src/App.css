@@ -2,3 +2,9 @@
    font-family: 'Open Sans', 'Baloo Tammudu 2', sans-serif;
    font-size: 1em;
 }
+.left{
+   width: 50%;
+}
+.right{
+   width: 50%;
+}
