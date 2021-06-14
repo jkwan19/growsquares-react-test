@@ -5,7 +5,7 @@ const HouseButton = ({
   type
 }) => {
   return (
-    <div className='btn-type'>
+    <div className='btn-primary'>
       {type}
     </div>
   )

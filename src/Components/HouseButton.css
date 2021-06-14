@@ -1,7 +1,15 @@
-.btn-type {
+.btn-primary {
   font-size: .75em;
   padding: 5px;
   text-align: center;
   color: #00a3a3;
+  margin: 2px;
+  height: 100%;
+  font-weight: bold;
+}
+
+.btn-primary:active {
+  background-color:white;
+  border-radius: 5%;
 }
 
