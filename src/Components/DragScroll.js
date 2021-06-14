@@ -16,7 +16,8 @@ const DragScroll = () => {
 
   return (
     <div>
-      <h5>Growth Forecast</h5>
+      <div className="forecast">GROWTH FORECAST</div>
+      <div className="date">Jan 1</div>
       <div className="slider">
         <input
           type="range"

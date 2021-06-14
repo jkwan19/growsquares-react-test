@@ -4,8 +4,23 @@
 
 .drag-left{
   float: left;
+  font-size: .6em;
+  color: #b3b3b3;
 }
 
 .drag-right{
   float: right;
+  font-size: .6em;
+  color: #b3b3b3;
+}
+
+.date{
+  color: #00858a;
+  font-size: .5em;
+  padding: .5em;
+  font-weight: bold;
+}
+
+.forecast {
+  font-size: .7em;
 }

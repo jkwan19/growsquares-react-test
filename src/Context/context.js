@@ -16,12 +16,12 @@ export function ContextProvider (props) {
 
   useEffect(() => {
     setPlant(plants[plantActiveIndex].toLowerCase());
-  }, [plantActiveIndex])
+  }, [plantActiveIndex, plants])
 
   useEffect(() => {
     const house = houses[houseActiveIndex] === "Town House" ? "town_house" : houses[houseActiveIndex].toLowerCase();
     setHouse(house);
-  }, [houseActiveIndex])
+  }, [houseActiveIndex, houses])
 
   return(
     <Context.Provider value={{
