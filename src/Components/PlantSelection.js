@@ -14,7 +14,7 @@ const PlantSelection = () => {
 
   return (
     <div className="plants-container">
-      <div className="plants-header">Plant Selection</div>
+      <div className="plants-header">PLANT SELECTION</div>
       <div className="plants">
         {plants.map((plant, index) => {
           return (
