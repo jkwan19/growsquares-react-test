@@ -9,7 +9,6 @@ const PlantSelection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handlePlants = (event) => {
-    console.log(event.target, 'plant')
     setActiveIndex(parseInt(event.target.getAttribute("index")));
   };
 
