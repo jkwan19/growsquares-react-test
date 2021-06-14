@@ -4,6 +4,17 @@ import React, {
   createContext
 } from 'react';
 
+const dateFromDay = (year, day) => {
+  const currentYear = new Date(year, 0);
+  const currentDate = new Date(currentYear.setDate(day));
+  const options = {
+    month: 'long'
+  }
+  const month = new Intl.DateTimeFormat('en-US', options).format(currentDate)
+  const date = currentDate.getDate();
+  return `${month.substring(0, 3)} ${date}` ;
+}
+
 export const Context = createContext();
 
 export function ContextProvider (props) {
@@ -13,6 +24,9 @@ export function ContextProvider (props) {
   const [ houses, setHouses ] = useState(["House", "Apartment", "Town House"]);
   const [ plant, setPlant ] = useState(plants[0].toLowerCase());
   const [ house, setHouse ] = useState(houses[0].toLowerCase());
+  const [ value, setValue ] = useState(1);
+  const [ date, setDate ] = useState(dateFromDay(2021, 1))
+  const [ time, setTime ] = useState(0);
 
   useEffect(() => {
     setPlant(plants[plantActiveIndex].toLowerCase());
@@ -23,6 +37,10 @@ export function ContextProvider (props) {
     setHouse(house);
   }, [houseActiveIndex, houses])
 
+  useEffect(() => {
+    setDate(dateFromDay(2021, value))
+  }, [value])
+
   return(
     <Context.Provider value={{
       houseActiveIndex,
@@ -32,7 +50,11 @@ export function ContextProvider (props) {
       plant,
       house,
       plants,
-      houses
+      houses,
+      time,
+      date,
+      value,
+      setValue
     }}>
       {props.children}
     </Context.Provider>

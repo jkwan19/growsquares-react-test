@@ -1,28 +1,14 @@
 import React, {
   useState,
   useEffect,
+  useContext
 } from 'react';
 import './DragScroll.css';
+import { Context } from '../Context/context';
 
-
-const dateFromDay = (year, day) => {
-  const currentYear = new Date(year, 0);
-  const currentDate = new Date(currentYear.setDate(day));
-  const options = {
-    month: 'long'
-  }
-  const month = new Intl.DateTimeFormat('en-US', options).format(currentDate)
-  const date = currentDate.getDate();
-  return `${month.substring(0, 3)} ${date}` ;
-}
 const DragScroll = () => {
 
-  const [value, setValue] = useState(1);
-  const [date, setDate] = useState(dateFromDay(2021, 1))
-
-  useEffect(() => {
-    setDate(dateFromDay(2021, value))
-  }, [value])
+  const { value, setValue, date } = useContext(Context);
 
   const handleScroll = (event) => {
     setValue(event.target.value)
