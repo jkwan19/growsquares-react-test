@@ -1,0 +1,11 @@
+.slider {
+  position: relative;
+}
+
+.drag-left{
+  float: left;
+}
+
+.drag-right{
+  float: right;
+}

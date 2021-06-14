@@ -1,10 +1,15 @@
 import React from 'react';
+import './DragScroll.css';
 
 const DragScroll = () => {
-  return(
+  return (
     <div>
       <h5>Growth Forecast</h5>
-      <div>Scroll</div>
+      <div className="slider">
+        <input type="range" min="1" max="365"/>
+        <label for="jan" className="drag-left">Jan</label>
+        <label for="dec" className="drag-right">Dec</label>
+      </div>
     </div>
     )
 };
