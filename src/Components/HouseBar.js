@@ -8,7 +8,7 @@ const HouseBar = () => {
   const [ activeIndex, setActiveIndex ] = useState(0);
 
   const handleHouse = (event) => {
-    setActiveIndex(event.target.getAttribute("index"));
+    setActiveIndex(parseInt(event.target.getAttribute("index")));
   };
 
   return (
