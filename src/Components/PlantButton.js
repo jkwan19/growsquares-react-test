@@ -6,7 +6,10 @@ const PlantButton = ({
 }) => {
   return (
     <div className='plant-btn'>
-      <img src={process.env.PUBLIC_URL + `/assets/plant_images/${plant}.png`} />
+      <img
+        src={process.env.PUBLIC_URL + `/assets/plant_images/${plant}.png`}
+        alt={plant}
+        />
     </div>
   )
 };

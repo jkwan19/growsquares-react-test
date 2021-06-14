@@ -2,10 +2,17 @@ import React from 'react';
 import './HouseButton.css';
 
 const HouseButton = ({
-  type
+  type,
+  index,
+  activeIndex,
+  handleHouse
 }) => {
   return (
-    <div className='btn-primary'>
+    <div
+      className={'btn-primary'}
+      index={index}
+      onClick={handleHouse}
+      >
       {type}
     </div>
   )

@@ -7,8 +7,8 @@ const DragScroll = () => {
       <h5>Growth Forecast</h5>
       <div className="slider">
         <input type="range" min="1" max="365"/>
-        <label for="jan" className="drag-left">Jan</label>
-        <label for="dec" className="drag-right">Dec</label>
+        <label htmlFor="jan" className="drag-left">Jan</label>
+        <label htmlFor="dec" className="drag-right">Dec</label>
       </div>
     </div>
     )

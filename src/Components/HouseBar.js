@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HouseBar.css';
 import HouseButton from './HouseButton';
 
+const options = ["House", "Apartment", "Town House"];
+
 const HouseBar = () => {
+  const [ activeIndex, setActiveIndex ] = useState(0);
+
+  const handleHouse = (event) => {
+    setActiveIndex(event.target.getAttribute("index"));
+  };
+
   return (
     <div className="btn-bar">
       <div className="btn-container">
-        <HouseButton type="House"/>
-        <HouseButton type="Apartment"/>
-        <HouseButton type="Town House"/>
+        {options.map((item, index) => {
+          return (
+            <HouseButton
+              key={item}
+              type={item}
+              value={item}
+              index={index}
+              activeIndex={activeIndex}
+              handleHouse={handleHouse}
+            />
+          )
+        })}
       </div>
     </div>
   )
