@@ -25,7 +25,8 @@ export function ContextProvider (props) {
   const [ plant, setPlant ] = useState(plants[0].toLowerCase());
   const [ house, setHouse ] = useState(houses[0].toLowerCase());
   const [ value, setValue ] = useState(1);
-  const [ date, setDate ] = useState(dateFromDay(2021, 1))
+  const [ date, setDate ] = useState(dateFromDay(2021, 1));
+  const [ videoDuration, setVideoDuration ] = useState(0);
   const [ time, setTime ] = useState(0);
 
   useEffect(() => {
@@ -41,6 +42,10 @@ export function ContextProvider (props) {
     setDate(dateFromDay(2021, value))
   }, [value])
 
+  // useEffect(() => {
+  //   setVideoDuration(getVideoDuration());
+  // }, [plant, house])
+
   return(
     <Context.Provider value={{
       houseActiveIndex,
@@ -54,7 +59,8 @@ export function ContextProvider (props) {
       time,
       date,
       value,
-      setValue
+      setValue,
+      setVideoDuration
     }}>
       {props.children}
     </Context.Provider>
