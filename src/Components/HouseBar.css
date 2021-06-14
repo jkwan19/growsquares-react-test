@@ -13,4 +13,5 @@
   flex-direction: row;
   padding: 2px;
   margin: 2px;
+  cursor: pointer;
 }
