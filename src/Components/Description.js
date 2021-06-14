@@ -3,7 +3,7 @@ import './Description.css'
 
 const Description = () => {
   return (
-    <div className="description">
+    <div className="top-right">
       <div className="text-box">
         <h2 className="header">consequat mauris nunc</h2>
         <h4 className="subheader">netus et malesuada fames ac</h4>
