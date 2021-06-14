@@ -5,6 +5,7 @@ import Description from './Components/Description';
 import Video from './Components/Video';
 import HouseBar from './Components/HouseBar';
 import PlantSelection from './Components/PlantSelection';
+import DragScroll from './Components/DragScroll';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Description />
         <div className="bottom-right">
           <PlantSelection />
+          <DragScroll />
         </div>
       </div>
     </div>
