@@ -4,10 +4,8 @@ import { Context } from '../Context/context';
 
 import HouseButton from './HouseButton';
 
-const options = ["House", "Apartment", "Town House"];
-
 const HouseBar = () => {
-  const { houseActiveIndex, setHouseActiveIndex } = useContext(Context);
+  const { houseActiveIndex, setHouseActiveIndex, houses } = useContext(Context);
 
   const handleHouse = (event) => {
     setHouseActiveIndex(parseInt(event.target.getAttribute("index")));
@@ -16,12 +14,12 @@ const HouseBar = () => {
   return (
     <div className="btn-bar">
       <div className="btn-container">
-        {options.map((item, index) => {
+        {houses.map((house, index) => {
           return (
             <HouseButton
-              key={item}
-              type={item}
-              value={item}
+              key={house}
+              type={house}
+              value={house}
               index={index}
               activeIndex={houseActiveIndex}
               handleHouse={handleHouse}

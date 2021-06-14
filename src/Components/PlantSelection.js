@@ -4,11 +4,9 @@ import { Context } from '../Context/context';
 
 import PlantButton from './PlantButton';
 
-const plants = ['Basil', 'Beets', 'Scallion'];
-
 const PlantSelection = () => {
 
-  const { plantActiveIndex, setPlantActiveIndex } = useContext(Context);
+  const { plantActiveIndex, setPlantActiveIndex, plants } = useContext(Context);
 
   const handlePlants = (event) => {
     setPlantActiveIndex(parseInt(event.target.getAttribute("index")));

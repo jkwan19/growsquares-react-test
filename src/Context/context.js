@@ -4,14 +4,13 @@ import React, {
   createContext
 } from 'react';
 
-const plants = ['Basil', 'Beets', 'Scallion'];
-const houses = ["House", "Apartment", "Town House"];
-
 export const Context = createContext();
 
 export function ContextProvider (props) {
   const [ houseActiveIndex, setHouseActiveIndex ] = useState(0);
   const [ plantActiveIndex, setPlantActiveIndex ] = useState(0);
+  const [ plants, setPlants ] = useState(['Basil', 'Beets', 'Scallion']);
+  const [ houses, setHouses ] = useState(["House", "Apartment", "Town House"]);
   const [ plant, setPlant ] = useState(plants[0]);
   const [ house, setHouse ] = useState(houses[0]);
 
@@ -30,7 +29,9 @@ export function ContextProvider (props) {
       plantActiveIndex,
       setPlantActiveIndex,
       plant,
-      house
+      house,
+      plants,
+      houses
     }}>
       {props.children}
     </Context.Provider>
