@@ -10,7 +10,7 @@ const HouseButton = ({
 
   return (
     <div
-      className={'btn-primary' + `${index === activeIndex ? ' active' : ''}`}
+      className={`btn-primary${index === activeIndex ? ' active' : ''}`}
       index={index}
       onClick={handleHouse}
       >

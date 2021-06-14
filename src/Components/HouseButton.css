@@ -8,8 +8,7 @@
   font-weight: bold;
 }
 
-.btn-primary:active {
+.active {
   background-color:white;
   border-radius: 5%;
 }
-
