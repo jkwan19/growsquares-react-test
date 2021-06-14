@@ -2,11 +2,20 @@ import React from 'react';
 import './PlantButton.css';
 
 const PlantButton = ({
-  plant
+  plant,
+  index,
+  activeIndex,
+  handlePlants
 }) => {
+
   return (
-    <div className='plant-btn'>
+    <div
+      className={`plant-btn${index === activeIndex ? ' active' : ''}`}
+      onClick={handlePlants}
+      >
       <img
+        className={`plant-img${index === activeIndex ? ' active' : ''}`}
+        index={index}
         src={process.env.PUBLIC_URL + `/assets/plant_images/${plant}.png`}
         alt={plant}
         />
