@@ -11,15 +11,16 @@ export function ContextProvider (props) {
   const [ plantActiveIndex, setPlantActiveIndex ] = useState(0);
   const [ plants, setPlants ] = useState(['Basil', 'Beets', 'Scallion']);
   const [ houses, setHouses ] = useState(["House", "Apartment", "Town House"]);
-  const [ plant, setPlant ] = useState(plants[0]);
-  const [ house, setHouse ] = useState(houses[0]);
+  const [ plant, setPlant ] = useState(plants[0].toLowerCase());
+  const [ house, setHouse ] = useState(houses[0].toLowerCase());
 
   useEffect(() => {
-    setPlant(plants[plantActiveIndex]);
+    setPlant(plants[plantActiveIndex].toLowerCase());
   }, [plantActiveIndex])
 
   useEffect(() => {
-    setHouse(houses[houseActiveIndex]);
+    const house = houses[houseActiveIndex] === "Town House" ? "town_house" : houses[houseActiveIndex].toLowerCase();
+    setHouse(house);
   }, [houseActiveIndex])
 
   return(
