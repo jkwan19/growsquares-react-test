@@ -5,7 +5,7 @@ const PlantButton = ({
 }) => {
   return (
     <div className='plant-btn'>
-      {plant}
+      <img src={process.env.PUBLIC_URL + `/assets/plant_images/${plant}.png`} />
     </div>
   )
 };
