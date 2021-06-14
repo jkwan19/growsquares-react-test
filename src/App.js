@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import { Context } from './Context/context';
 
 import Description from './Components/Description';
 import Video from './Components/Video';
@@ -8,7 +7,6 @@ import PlantSelection from './Components/PlantSelection';
 import DragScroll from './Components/DragScroll';
 
 const App = () => {
-
   return (
     <div id='app'>
       <div className="left">
