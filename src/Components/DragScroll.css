@@ -22,5 +22,7 @@
 }
 
 .forecast {
-  font-size: .7 em;
+  font-size: .7em;
+  font-size: 1vh;
+  font-size: 1vw;
 }
