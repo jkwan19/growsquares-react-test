@@ -15,6 +15,11 @@ const dateFromDay = (year, day) => {
   return `${month.substring(0, 3)} ${date}` ;
 }
 
+const convertVideoFrame = (day, videoDuration) => {
+  const datePercentage = day / 365;
+  return videoDuration * datePercentage;
+};
+
 export const Context = createContext();
 
 export function ContextProvider (props) {
@@ -42,9 +47,9 @@ export function ContextProvider (props) {
     setDate(dateFromDay(2021, value))
   }, [value])
 
-  // useEffect(() => {
-  //   setVideoDuration(getVideoDuration());
-  // }, [plant, house])
+  useEffect(() => {
+    setTime(convertVideoFrame(value, videoDuration));
+  }, [value, videoDuration])
 
   return(
     <Context.Provider value={{
