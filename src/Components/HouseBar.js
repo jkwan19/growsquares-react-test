@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './HouseBar.css';
+import { Context } from '../Context/context';
+
 import HouseButton from './HouseButton';
 
 const options = ["House", "Apartment", "Town House"];
 
 const HouseBar = () => {
-  const [ activeIndex, setActiveIndex ] = useState(0);
+  const { houseActiveIndex, setHouseActiveIndex } = useContext(Context);
 
   const handleHouse = (event) => {
-    setActiveIndex(parseInt(event.target.getAttribute("index")));
+    setHouseActiveIndex(parseInt(event.target.getAttribute("index")));
   };
 
   return (
@@ -21,7 +23,7 @@ const HouseBar = () => {
               type={item}
               value={item}
               index={index}
-              activeIndex={activeIndex}
+              activeIndex={houseActiveIndex}
               handleHouse={handleHouse}
             />
           )

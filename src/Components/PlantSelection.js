@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './PlantSelection.css';
+import { Context } from '../Context/context';
+
 import PlantButton from './PlantButton';
 
 const plants = ['Basil', 'Beets', 'Scallion'];
 
 const PlantSelection = () => {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const { plantActiveIndex, setPlantActiveIndex } = useContext(Context);
 
   const handlePlants = (event) => {
-    setActiveIndex(parseInt(event.target.getAttribute("index")));
+    setPlantActiveIndex(parseInt(event.target.getAttribute("index")));
   };
 
   return (
@@ -22,7 +24,7 @@ const PlantSelection = () => {
               key={plant}
               plant={plant}
               index={index}
-              activeIndex={activeIndex}
+              activeIndex={plantActiveIndex}
               handlePlants={handlePlants}
             />
           )

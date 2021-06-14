@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import { Context } from './Context/context';
 
 import Description from './Components/Description';
 import Video from './Components/Video';
