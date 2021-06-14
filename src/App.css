@@ -13,3 +13,7 @@
    height: 100%;
    float: right;
 }
+
+.bottom-right{
+  padding: 2em 4em;
+}

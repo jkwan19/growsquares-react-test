@@ -1,0 +1,12 @@
+.plant-btn {
+  border-radius: 5%;
+  opacity: 0.3;
+}
+
+img {
+  -webkit-filter: grayscale(100%);
+     -moz-filter: grayscale(100%);
+       -o-filter: grayscale(100%);
+      -ms-filter: grayscale(100%);
+          filter: grayscale(100%);
+}

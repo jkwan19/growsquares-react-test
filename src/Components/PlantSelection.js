@@ -4,7 +4,7 @@ import PlantButton from './PlantButton';
 
 const PlantSelection = () => {
   return (
-    <div>
+    <div className="plants-container">
       <h5>Plant Selection</h5>
       <div className="plants">
         <PlantButton plant='Basil'/>
