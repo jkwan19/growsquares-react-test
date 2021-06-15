@@ -131,7 +131,7 @@ input[type=range]::-ms-fill-upper {
     flex-direction: row;
     width: 100vw;
     height: auto;
-    order: 2;
+    grid-template-rows: 1fr 1fr 1fr;
   }
   .top-right {
     order: 2;
@@ -139,8 +139,7 @@ input[type=range]::-ms-fill-upper {
   }
   .bottom-right {
     order: 4;
-    height: 33vh;
     margin: 0;
-    padding: 1em 2em;
+    padding: 1em 3em;
   }
 }
