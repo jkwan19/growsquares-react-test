@@ -1,19 +1,19 @@
 import React, {
   useEffect,
   useState,
-  createContext
+  createContext,
 } from 'react';
 
 const dateFromDay = (year, day) => {
   const currentYear = new Date(year, 0);
   const currentDate = new Date(currentYear.setDate(day));
   const options = {
-    month: 'long'
-  }
-  const month = new Intl.DateTimeFormat('en-US', options).format(currentDate)
+    month: 'long',
+  };
+  const month = new Intl.DateTimeFormat('en-US', options).format(currentDate);
   const date = currentDate.getDate();
-  return `${month.substring(0, 3)} ${date}` ;
-}
+  return `${month.substring(0, 3)} ${date}`;
+};
 
 const convertVideoFrame = (day, videoDuration) => {
   const datePercentage = day / 365;
@@ -22,36 +22,36 @@ const convertVideoFrame = (day, videoDuration) => {
 
 export const Context = createContext();
 
-export function ContextProvider (props) {
-  const [ houseActiveIndex, setHouseActiveIndex ] = useState(0);
-  const [ plantActiveIndex, setPlantActiveIndex ] = useState(0);
-  const [ plants, setPlants ] = useState(['Basil', 'Beets', 'Scallion']);
-  const [ houses, setHouses ] = useState(["House", "Apartment", "Town House"]);
-  const [ plant, setPlant ] = useState(plants[0].toLowerCase());
-  const [ house, setHouse ] = useState(houses[0].toLowerCase());
-  const [ value, setValue ] = useState(1);
-  const [ date, setDate ] = useState(dateFromDay(2021, 1));
-  const [ videoDuration, setVideoDuration ] = useState(0);
-  const [ time, setTime ] = useState(0);
+export function ContextProvider(props) {
+  const [houseActiveIndex, setHouseActiveIndex] = useState(0);
+  const [plantActiveIndex, setPlantActiveIndex] = useState(0);
+  const [plants, setPlants] = useState(['Basil', 'Beets', 'Scallion']);
+  const [houses, setHouses] = useState(['House', 'Apartment', 'Town House']);
+  const [plant, setPlant] = useState(plants[0].toLowerCase());
+  const [house, setHouse] = useState(houses[0].toLowerCase());
+  const [value, setValue] = useState(1);
+  const [date, setDate] = useState(dateFromDay(2021, 1));
+  const [videoDuration, setVideoDuration] = useState(0);
+  const [time, setTime] = useState(0);
 
   useEffect(() => {
     setPlant(plants[plantActiveIndex].toLowerCase());
-  }, [plantActiveIndex, plants])
+  }, [plantActiveIndex, plants]);
 
   useEffect(() => {
-    const house = houses[houseActiveIndex] === "Town House" ? "town_house" : houses[houseActiveIndex].toLowerCase();
+    const house = houses[houseActiveIndex] === 'Town House' ? 'town_house' : houses[houseActiveIndex].toLowerCase();
     setHouse(house);
-  }, [houseActiveIndex, houses])
+  }, [houseActiveIndex, houses]);
 
   useEffect(() => {
-    setDate(dateFromDay(2021, value))
-  }, [value])
+    setDate(dateFromDay(2021, value));
+  }, [value]);
 
   useEffect(() => {
     setTime(convertVideoFrame(value, videoDuration));
-  }, [value, videoDuration])
+  }, [value, videoDuration]);
 
-  return(
+  return (
     <Context.Provider value={{
       houseActiveIndex,
       setHouseActiveIndex,
@@ -65,9 +65,10 @@ export function ContextProvider (props) {
       date,
       value,
       setValue,
-      setVideoDuration
-    }}>
+      setVideoDuration,
+    }}
+    >
       {props.children}
     </Context.Provider>
-  )
+  );
 }

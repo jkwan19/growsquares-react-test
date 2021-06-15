@@ -1,15 +1,14 @@
 import React, {
-  useContext
+  useContext,
 } from 'react';
 import './DragScroll.css';
 import { Context } from '../Context/context';
 
 const DragScroll = () => {
-
   const { value, setValue, date } = useContext(Context);
 
   const handleScroll = (event) => {
-    setValue(event.target.value)
+    setValue(event.target.value);
   };
 
   return (
@@ -24,12 +23,12 @@ const DragScroll = () => {
           value={value}
           step={1}
           onChange={handleScroll}
-          />
+        />
         <label htmlFor="jan" className="drag-left">Jan</label>
         <label htmlFor="dec" className="drag-right">Dec</label>
       </div>
     </div>
-    )
+  );
 };
 
 export default DragScroll;
