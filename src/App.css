@@ -4,6 +4,12 @@
    display: flex;
    height: 100vh;
 }
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 .left{
    width: 55vw;
    float: left;
@@ -117,12 +123,12 @@ input[type=range]::-ms-fill-upper {
   #app {
     display: flex;
     flex-direction: column;
-    width: 150vw;
+    width: 100vw;
   }
   .left,
   .right
   {
-    width: 150vw;
+    width: 100vw;
   }
   .top-right {
     order: -100;

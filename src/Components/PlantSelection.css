@@ -16,3 +16,9 @@ img {
 .plants-container {
   width: 100%;
 }
+
+@media screen and (max-width: 530px) {
+  .plants-header{
+    font-size: 1.5vh;
+  }
+}

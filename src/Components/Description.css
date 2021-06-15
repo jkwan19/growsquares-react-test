@@ -32,8 +32,17 @@ p {
 @media screen and (max-width: 530px) {
   .top-right {
     order: -1;
-    width: 100vw;
-    height: 33vh;
+    width: 90vw;
+    height: 25vh;
+    padding: 2em 1em;
   }
-
+  .header{
+    font-size: 1.5vh;
+  }
+  .subheader{
+    font-size: 2vh;
+  }
+  p {
+    font-size: 1.5vh;
+  }
 }

@@ -26,3 +26,15 @@
   font-size: .9vh;
   font-size: .9vw;
 }
+
+@media screen and (max-width: 530px) {
+  .forecast{
+    font-size: 1.5vh;
+  }
+  .date {
+    font-size: 1.5vh;
+  }
+  .drag-right, .drag-left {
+    font-size: 1.5vh;
+  }
+}
