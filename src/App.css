@@ -125,18 +125,23 @@ input[type=range]::-ms-fill-upper {
     flex-direction: column;
     width: 100vw;
   }
-  .left,
-  .right
-  {
+  .left{
     width: 100vw;
+    height: auto;
+    order: 2;
+  }
+  .right{
+    width: 100vw;
+    min-height: 0;
   }
   .top-right {
-    order: -100;
+    order: 2;
     width: 100vw;
   }
   .bottom-right {
-    order: 1;
-    width: 100vw;
+    order: 4;
     height: 33vh;
+    margin: 0;
+    padding: 1em 2em;
   }
 }
