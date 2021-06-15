@@ -3,7 +3,7 @@ import './Description.css'
 
 const Description = () => {
   return (
-    <div className="top-right">
+    <div className="flex-child rect top-right">
       <div className="text-box">
         <div className="header">consequat mauris nunc</div>
         <div className="subheader">netus et malesuada fames ac</div>

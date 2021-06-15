@@ -10,25 +10,28 @@ html, body {
 body {
   position: relative
 }
-.left{
-   width: 55vw;
+.flex-container{
+   width: 50vw;
    float: left;
    height: 100%;
+   display: flex;
+   flex-direction: column;
+   flex-wrap:wrap;
 }
-.right{
-   width: 45vw;
-   float: right;
-   min-height: 100%;
-   display: grid;
-   flex-direction: row;
+.rect {
+  flex: 1 1 47%;
+  display: inline-block;
+  height: 50%;
+  vertical-align: top;
 }
-
+.flex-child {
+  box-sizing:border-box;
+}
 .bottom-right{
   padding: 2em 3em;
   margin: 1em 2em;
   height: 50%;
 }
-
 input[type=range] {
   height: 26px;
   -webkit-appearance: none;
@@ -121,18 +124,14 @@ input[type=range]::-ms-fill-upper {
 
 @media screen and (max-width: 530px) {
   #app {
-    display: flex;
-    flex-direction: column;
     width: 100vw;
   }
-  .left{
+  .flex-container{
+    display: flex;
+    flex-direction: row;
     width: 100vw;
     height: auto;
     order: 2;
-  }
-  .right{
-    width: 100vw;
-    min-height: 0;
   }
   .top-right {
     order: 2;
