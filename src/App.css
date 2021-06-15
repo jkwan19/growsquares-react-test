@@ -112,3 +112,25 @@ input[type=range]::-ms-fill-lower {
 input[type=range]::-ms-fill-upper {
   background-color: #d6d6d6;
 }
+
+@media screen and (max-width: 530px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+    width: 150vw;
+  }
+  .left,
+  .right
+  {
+    width: 150vw;
+  }
+  .top-right {
+    order: -100;
+    width: 100vw;
+  }
+  .bottom-right {
+    order: 1;
+    width: 100vw;
+    height: 33vh;
+  }
+}

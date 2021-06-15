@@ -28,3 +28,12 @@ p {
   font-size: 2.9vh;
   font-size: 1.4vw;
 }
+
+@media screen and (max-width: 530px) {
+  .top-right {
+    order: -1;
+    width: 100vw;
+    height: 33vh;
+  }
+
+}

@@ -2,11 +2,10 @@
   position: absolute;
   padding: .2em .2em;
   border-radius: .5em;
-  left: 25%;
-  right: 25%;
   bottom: 5%;
   margin: 1em;
   background-color: #e8e8e8;
+  transform: translateX(50%);
 }
 
 .btn-container{
