@@ -25,8 +25,8 @@ export const Context = createContext();
 export function ContextProvider(props) {
   const [houseActiveIndex, setHouseActiveIndex] = useState(0);
   const [plantActiveIndex, setPlantActiveIndex] = useState(0);
-  const [plants, setPlants] = useState(['Basil', 'Beets', 'Scallion']);
-  const [houses, setHouses] = useState(['House', 'Apartment', 'Town House']);
+  const [plants] = useState(['Basil', 'Beets', 'Scallion']);
+  const [houses] = useState(['House', 'Apartment', 'Town House']);
   const [plant, setPlant] = useState(plants[0].toLowerCase());
   const [house, setHouse] = useState(houses[0].toLowerCase());
   const [value, setValue] = useState(1);
@@ -39,8 +39,8 @@ export function ContextProvider(props) {
   }, [plantActiveIndex, plants]);
 
   useEffect(() => {
-    const house = houses[houseActiveIndex] === 'Town House' ? 'town_house' : houses[houseActiveIndex].toLowerCase();
-    setHouse(house);
+    const selectHouse = houses[houseActiveIndex] === 'Town House' ? 'town_house' : houses[houseActiveIndex].toLowerCase();
+    setHouse(selectHouse);
   }, [houseActiveIndex, houses]);
 
   useEffect(() => {
